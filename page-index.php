@@ -73,7 +73,7 @@ get_header(); ?>
                                     <div
                                         class="slide"
                                         style="background: url('<?php echo esc_url(
-                                            $carrusel["imagen_1"]["url"],
+                                            $carrusel["imagen_1"],
                                         ); ?>') no-repeat;"
                                     ></div>
                                 </div>
@@ -85,7 +85,7 @@ get_header(); ?>
                                     <div
                                         class="slide"
                                         style="background: url('<?php echo esc_url(
-                                            $carrusel["imagen_2"]["url"],
+                                            $carrusel["imagen_2"],
                                         ); ?>') no-repeat;"
                                     ></div>
                                 </div>
@@ -97,7 +97,7 @@ get_header(); ?>
                                     <div
                                         class="slide"
                                         style="background: url('<?php echo esc_url(
-                                            $carrusel["imagen_3"]["url"],
+                                            $carrusel["imagen_3"],
                                         ); ?>') no-repeat;"
                                     ></div>
                                 </div>
