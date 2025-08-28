@@ -679,84 +679,62 @@ get_header(); ?>
                 </h1>
             </div>
         </div>
-        <div
-            class="row"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="0"
-        >
-            <div class="col-12 text-center">
-                <!-- Slider main container -->
-                <div class="swiper swiper-galeria">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <a href="#">
-                                <img
-                                    class="img-fluid"
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/galeria-de-fotos/1.png"
-                                    alt=""
-                                />
-                            </a>
+
+        <?php
+        // Obtenemos el grupo de campos de la galería
+        $galeria = get_field("galeria_de_fotos");
+
+        // Solo continuamos si el grupo 'galeria' tiene al menos una imagen
+        if ($galeria): ?>
+            <div
+                class="row"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="0"
+            >
+                <div class="col-12 text-center">
+                    <div class="swiper swiper-galeria">
+                        <div class="swiper-wrapper">
+
+                            <?php // Recorremos cada imagen dentro del grupo 'galeria'
+                            foreach ($galeria as $nombre_campo => $imagen_url):
+                                // Solo creamos el slide si la URL de la imagen no está vacía
+                                if (!empty($imagen_url)): ?>
+                                    <div class="swiper-slide">
+
+                                        <?php
+                                    // Hacemos que el enlace apunte a la misma imagen para verla en grande
+                                    ?>
+                                        <a href="<?php echo esc_url(
+                                            $imagen_url,
+                                        ); ?>" data-fancybox="gallery">
+                                            <img
+                                                class="img-fluid"
+                                                src="<?php echo esc_url(
+                                                    $imagen_url,
+                                                ); ?>"
+                                                alt="Imagen de la galería"
+                                            />
+                                        </a>
+                                    </div>
+                            <?php endif; // Fin del if !empty
+                            endforeach;
+            // Fin del bucle foreach
+            ?>
+
                         </div>
-                        <div class="swiper-slide">
-                            <a href="#">
-                                <img
-                                    class="img-fluid"
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/galeria-de-fotos/2.png"
-                                    alt=""
-                                />
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#">
-                                <img
-                                    class="img-fluid"
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/galeria-de-fotos/3.png"
-                                    alt=""
-                                />
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#">
-                                <img
-                                    class="img-fluid"
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/galeria-de-fotos/4.png"
-                                    alt=""
-                                />
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#">
-                                <img
-                                    class="img-fluid"
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/galeria-de-fotos/5.png"
-                                    alt=""
-                                />
-                            </a>
-                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <div class="swiper-scrollbar"></div>
                     </div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
-        </div>
+        <?php endif;
+
+// Fin del if ($galeria)
+?>
     </div>
 </section>
 
