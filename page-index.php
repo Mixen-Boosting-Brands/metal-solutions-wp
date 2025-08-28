@@ -5,83 +5,118 @@
 get_header(); ?>
 
 <section id="jumbotron">
-    <div class="container top-half">
-        <div class="row">
-            <div class="col-lg-4 order-lg-2">
-                <p
-                    class="mt-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="0"
-                >
-                    Manufacturamos metales y polímeros para el sector
-                    industrial, comercial y público con tecnología de
-                    clase mundial.
-                </p>
-            </div>
-            <div
-                class="col-lg-4 offset-lg-2 order-lg-1 my-auto position-relative"
-            >
-                <h1
-                    class="text-black"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="0"
-                >
-                    Soluciones de manufactura
-                </h1>
-                <h1
-                    class="text-white"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                >
-                    metal-mecánica en Chihuahua
-                </h1>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bottom-half">
-        <div class="row">
-            <div class="col-12">
-                <!-- Slider main container -->
-                <div class="swiper swiper-jumbotron">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="overlay"></div>
-                            <div
-                                class="slide slide 1"
-                                style="
-                                    background: url(&quot;<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/jumbotron/1.png&quot;)
-                                        no-repeat;
-                                "
-                            ></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="overlay"></div>
-                            <div
-                                class="slide"
-                                style="
-                                    background: url(&quot;<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/jumbotron/2.png&quot;)
-                                        no-repeat;
-                                "
-                            ></div>
-                        </div>
-                    </div>
 
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+    <?php
+    // Obtenemos todo el grupo de campos 'carrusel'
+    $carrusel = get_field("carrusel");
+
+    // Solo mostramos la sección si el grupo de campos tiene contenido
+    if ($carrusel): ?>
+
+        <div class="container top-half">
+            <div class="row">
+                <div class="col-lg-4 order-lg-2">
+
+                    <?php if (!empty($carrusel["texto"])): ?>
+                        <p
+                            class="mt-4"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        >
+                            <?php echo wp_kses_post($carrusel["texto"]); ?>
+                        </p>
+                    <?php endif; ?>
+
+                </div>
+                <div class="col-lg-4 offset-lg-2 order-lg-1 my-auto position-relative">
+
+                    <?php if (!empty($carrusel["titulo_superior"])): ?>
+                        <h1
+                            class="text-black"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        >
+                            <?php echo esc_html(
+                                $carrusel["titulo_superior"],
+                            ); ?>
+                        </h1>
+                    <?php endif; ?>
+
+                    <?php if (!empty($carrusel["titulo_inferior"])): ?>
+                        <h1
+                            class="text-white"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="100"
+                        >
+                            <?php echo esc_html(
+                                $carrusel["titulo_inferior"],
+                            ); ?>
+                        </h1>
+                    <?php endif; ?>
+
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="container-fluid bottom-half">
+            <div class="row">
+                <div class="col-12">
+                    <div class="swiper swiper-jumbotron">
+                        <div class="swiper-wrapper">
+
+                            <?php if (!empty($carrusel["imagen_1"])): ?>
+                                <div class="swiper-slide">
+                                    <div class="overlay"></div>
+                                    <div
+                                        class="slide"
+                                        style="background: url('<?php echo esc_url(
+                                            $carrusel["imagen_1"]["url"],
+                                        ); ?>') no-repeat;"
+                                    ></div>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($carrusel["imagen_2"])): ?>
+                                <div class="swiper-slide">
+                                    <div class="overlay"></div>
+                                    <div
+                                        class="slide"
+                                        style="background: url('<?php echo esc_url(
+                                            $carrusel["imagen_2"]["url"],
+                                        ); ?>') no-repeat;"
+                                    ></div>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($carrusel["imagen_3"])): ?>
+                                <div class="swiper-slide">
+                                    <div class="overlay"></div>
+                                    <div
+                                        class="slide"
+                                        style="background: url('<?php echo esc_url(
+                                            $carrusel["imagen_3"]["url"],
+                                        ); ?>') no-repeat;"
+                                    ></div>
+                                </div>
+                            <?php endif; ?>
+
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <?php endif;
+
+// Fin del if ($carrusel)
+?>
+
 </section>
 
 <section id="servicios-y-productos">
