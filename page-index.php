@@ -120,50 +120,84 @@ get_header(); ?>
 </section>
 
 <section id="servicios-y-productos">
-    <div class="container-fluid">
-        <div class="row g-2">
-            <div class="col-md-6">
-                <a
-                    href="#servicios"
-                    id="btn-servicios"
-                    class="elemento-general"
-                >
-                    <div
-                        class="texto"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="0"
-                    >
-                        <h1>Servicios</h1>
-                        <p>
-                            Conoce más
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a
-                    href="#productos"
-                    id="btn-productos"
-                    class="elemento-general"
-                >
-                    <div
-                        class="texto"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="0"
-                    >
-                        <h1>Productos</h1>
-                        <p>
-                            Conoce más
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </p>
-                    </div>
-                </a>
+
+    <?php
+    // Obtenemos el grupo de campos para los botones
+    $botones = get_field("botones_de_servicios_y_productos");
+
+    // Nos aseguramos de que el grupo de campos tenga datos antes de mostrar algo
+    if ($botones): ?>
+        <div class="container-fluid">
+            <div class="row g-2">
+                <div class="col-md-6">
+
+                    <?php
+        // Solo mostramos el enlace si la imagen existe
+        ?>
+                    <?php if (
+                        !empty($botones["imagen_de_fondo_de_boton_servicios"])
+                    ): ?>
+                        <a
+                            href="#servicios"
+                            id="btn-servicios"
+                            class="elemento-general"
+                            style="background-image: url('<?php echo esc_url(
+                                $botones["imagen_de_fondo_de_boton_servicios"],
+                            ); ?>');"
+                        >
+                            <div
+                                class="texto"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="0"
+                            >
+                                <h1>Servicios</h1>
+                                <p>
+                                    Conoce más
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </p>
+                            </div>
+                        </a>
+                    <?php endif; ?>
+
+                </div>
+                <div class="col-md-6">
+
+                    <?php
+        // Solo mostramos el enlace si la imagen existe
+        ?>
+                    <?php if (
+                        !empty($botones["imagen_de_fondo_de_boton_productos"])
+                    ): ?>
+                        <a
+                            href="#productos"
+                            id="btn-productos"
+                            class="elemento-general"
+                            style="background-image: url('<?php echo esc_url(
+                                $botones["imagen_de_fondo_de_boton_productos"],
+                            ); ?>');"
+                        >
+                            <div
+                                class="texto"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="0"
+                            >
+                                <h1>Productos</h1>
+                                <p>
+                                    Conoce más
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </p>
+                            </div>
+                        </a>
+                    <?php endif; ?>
+
+                </div>
             </div>
         </div>
-    </div>
+    <?php endif;
+    ?>
+
 </section>
 
 <section id="servicios" class="py-30">
