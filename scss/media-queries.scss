@@ -1,0 +1,86 @@
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+
+@media screen and (min-width: 375px) and (max-width: 394px) {
+    #jumbotron {
+        .top-half {
+            .text-white {
+                top: 80px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 395px) and (max-width: 575px) {
+    #jumbotron {
+        .top-half {
+            .text-white {
+                top: 50px;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+    #jumbotron {
+        .top-half {
+            .text-white {
+                top: 52px;
+            }
+        }
+    }
+
+    #servicios,
+    #productos {
+        .elemento {
+            font-size: 1rem;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+    #servicios,
+    #productos {
+        .elemento {
+            min-height: 300px;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+    #jumbotron {
+        .top-half {
+            align-items: end;
+
+            .text-black {
+                position: relative;
+                top: 20px;
+            }
+
+            .text-white {
+                top: 122px;
+            }
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+    #jumbotron {
+        .top-half {
+            .text-black {
+                top: 0px;
+            }
+
+            .text-white {
+                top: 120px;
+            }
+        }
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}
