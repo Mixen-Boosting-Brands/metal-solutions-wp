@@ -56,31 +56,82 @@
                             </ul>
                         </nav>
                     </div>
-                    <div
-                        class="col-md-4 order-md-3 my-auto text-center text-md-end"
-                    >
+                    <div class="col-md-4 order-md-3 my-auto text-center text-md-end">
                         <ul
                             class="list-unstyled"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="300"
                         >
-                            <li class="mb-3">
-                                <a
-                                    class="btn btn-primary rounded-pill"
-                                    href="tel:+526141735378"
-                                    ><i class="fa-solid fa-phone"></i> Karla
-                                    Solís 614 173 5378</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="btn btn-primary rounded-pill"
-                                    href="tel:+526141776547"
-                                    ><i class="fa-solid fa-phone"></i> Marco
-                                    Beltrán 614 177 6547</a
-                                >
-                            </li>
+
+                            <?php
+                            // Obtenemos el ID de la página de inicio (es bueno tenerlo por si acaso)
+                            $homepage_id = get_option("page_on_front");
+
+                            // Obtenemos los datos del primer teléfono USANDO el ID de la homepage
+                            $tel_1 = get_field("telefono_1", $homepage_id);
+
+                            // Verificamos que los datos existan
+                            if ($tel_1 && !empty($tel_1["numero"])):
+                                // Formateamos el número para mostrarlo con espacios
+                                $telefono_formateado_1 =
+                                    substr($tel_1["numero"], 0, 3) .
+                                    " " .
+                                    substr($tel_1["numero"], 3, 3) .
+                                    " " .
+                                    substr($tel_1["numero"], 6, 4); ?>
+                                <li class="mb-3">
+                                    <a
+                                        class="btn btn-primary rounded-pill"
+                                        href="tel:+52<?php echo esc_attr(
+                                            $tel_1["numero"],
+                                        ); ?>"
+                                    >
+                                        <i class="fa-solid fa-phone"></i> <?php echo esc_html(
+                                            $tel_1["nombre"],
+                                        ); ?>
+                                        <?php echo esc_html(
+                                            $telefono_formateado_1,
+                                        ); ?>
+                                    </a>
+                                </li>
+                            <?php
+                            endif;
+                            ?>
+
+
+                            <?php
+                            // Hacemos lo mismo para el segundo teléfono
+                            $tel_2 = get_field("telefono_2", $homepage_id);
+
+                            // Verificamos que los datos existan
+                            if ($tel_2 && !empty($tel_2["numero"])):
+                                // Formateamos el número para mostrarlo con espacios
+                                $telefono_formateado_2 =
+                                    substr($tel_2["numero"], 0, 3) .
+                                    " " .
+                                    substr($tel_2["numero"], 3, 3) .
+                                    " " .
+                                    substr($tel_2["numero"], 6, 4); ?>
+                                <li>
+                                    <a
+                                        class="btn btn-primary rounded-pill"
+                                        href="tel:+52<?php echo esc_attr(
+                                            $tel_2["numero"],
+                                        ); ?>"
+                                    >
+                                        <i class="fa-solid fa-phone"></i> <?php echo esc_html(
+                                            $tel_2["nombre"],
+                                        ); ?>
+                                        <?php echo esc_html(
+                                            $telefono_formateado_2,
+                                        ); ?>
+                                    </a>
+                                </li>
+                            <?php
+                            endif;
+                            ?>
+
                         </ul>
                     </div>
                 </div>
