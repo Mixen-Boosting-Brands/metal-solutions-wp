@@ -116,8 +116,11 @@
                     <ul class="list-unstyled">
 
                         <?php
-                        // Obtenemos los datos del primer teléfono
-                        $tel_1 = get_field("telefono_1");
+                        // 1. Obtenemos el ID de la página de inicio dinámicamente
+                        $homepage_id = get_option("page_on_front");
+
+                        // 2. Obtenemos los datos del primer teléfono USANDO el ID de la homepage
+                        $tel_1 = get_field("telefono_1", $homepage_id);
 
                         // Verificamos que el grupo y el subcampo 'numero' no estén vacíos
                         if ($tel_1 && !empty($tel_1["numero"])):
@@ -149,8 +152,8 @@
 
 
                         <?php
-                        // Obtenemos los datos del segundo teléfono
-                        $tel_2 = get_field("telefono_2");
+                        // 3. Hacemos lo mismo para el segundo teléfono (no es necesario volver a obtener el ID)
+                        $tel_2 = get_field("telefono_2", $homepage_id);
 
                         // Verificamos que el grupo y el subcampo 'numero' no estén vacíos
                         if ($tel_2 && !empty($tel_2["numero"])):
