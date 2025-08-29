@@ -179,6 +179,10 @@
                             get_the_ID(),
                             "large",
                         ); ?>"
+                        style="background: url('<?php echo get_the_post_thumbnail_url(
+                            get_the_ID(),
+                            "large",
+                        ); ?>') no-repeat;"
                     >
                         <div class="overlay"></div>
                         <p class="fw-bold"><?php the_title(); ?></p>
@@ -250,6 +254,10 @@
                             get_the_ID(),
                             "large",
                         ); ?>"
+                        style="background: url('<?php echo get_the_post_thumbnail_url(
+                            get_the_ID(),
+                            "large",
+                        ); ?>') no-repeat;"
                     >
                         <div class="overlay"></div>
                         <p class="fw-bold"><?php the_title(); ?></p>
