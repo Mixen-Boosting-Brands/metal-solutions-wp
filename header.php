@@ -119,20 +119,20 @@
                         // Obtenemos los datos del primer teléfono
                         $tel_1 = get_field("telefono_1");
 
-                        // Verificamos que el grupo y el subcampo 'telefono' no estén vacíos
-                        if ($tel_1 && !empty($tel_1["telefono"])):
+                        // Verificamos que el grupo y el subcampo 'numero' no estén vacíos
+                        if ($tel_1 && !empty($tel_1["numero"])):
                             // Formateamos el número para mostrarlo con espacios (e.g., 614 173 5378)
                             $telefono_formateado_1 =
-                                substr($tel_1["telefono"], 0, 3) .
+                                substr($tel_1["numero"], 0, 3) .
                                 " " .
-                                substr($tel_1["telefono"], 3, 3) .
+                                substr($tel_1["numero"], 3, 3) .
                                 " " .
-                                substr($tel_1["telefono"], 6, 4); ?>
+                                substr($tel_1["numero"], 6, 4); ?>
                             <li class="mb-3">
                                 <a
                                     class="btn btn-primary rounded-pill"
                                     href="tel:+52<?php echo esc_attr(
-                                        $tel_1["telefono"],
+                                        $tel_1["numero"],
                                     ); ?>"
                                 >
                                     <i class="fa-solid fa-phone"></i> <?php echo esc_html(
@@ -152,20 +152,20 @@
                         // Obtenemos los datos del segundo teléfono
                         $tel_2 = get_field("telefono_2");
 
-                        // Verificamos que el grupo y el subcampo 'telefono' no estén vacíos
-                        if ($tel_2 && !empty($tel_2["telefono"])):
+                        // Verificamos que el grupo y el subcampo 'numero' no estén vacíos
+                        if ($tel_2 && !empty($tel_2["numero"])):
                             // Formateamos el número para mostrarlo con espacios
                             $telefono_formateado_2 =
-                                substr($tel_2["telefono"], 0, 3) .
+                                substr($tel_2["numero"], 0, 3) .
                                 " " .
-                                substr($tel_2["telefono"], 3, 3) .
+                                substr($tel_2["numero"], 3, 3) .
                                 " " .
-                                substr($tel_2["telefono"], 6, 4); ?>
+                                substr($tel_2["numero"], 6, 4); ?>
                             <li>
                                 <a
                                     class="btn btn-primary rounded-pill"
                                     href="tel:+52<?php echo esc_attr(
-                                        $tel_2["telefono"],
+                                        $tel_2["numero"],
                                     ); ?>"
                                 >
                                     <i class="fa-solid fa-phone"></i> <?php echo esc_html(
