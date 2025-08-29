@@ -251,7 +251,7 @@
                         style="background-image: url('<?php echo get_the_post_thumbnail_url(
                             get_the_ID(),
                             "large",
-                        ); ?>') no-repeat;"
+                        ); ?>');"
                     >
                         <div class="overlay"></div>
                         <p class="fw-bold"><?php the_title(); ?></p>
@@ -326,7 +326,7 @@
                         style="background-image: url('<?php echo get_the_post_thumbnail_url(
                             get_the_ID(),
                             "large",
-                        ); ?>') no-repeat;"
+                        ); ?>');"
                     >
                         <div class="overlay"></div>
                         <p class="fw-bold"><?php the_title(); ?></p>
@@ -381,6 +381,7 @@
                             <?php // Recorremos cada imagen dentro del grupo 'galeria'
             // Recorremos cada imagen dentro del grupo 'galeria'
             // Recorremos cada imagen dentro del grupo 'galeria'
+                            // Recorremos cada imagen dentro del grupo 'galeria'
                             // Recorremos cada imagen dentro del grupo 'galeria'
                             foreach ($galeria as $nombre_campo => $imagen_url):
                                 // Solo creamos el slide si la URL de la imagen no está vacía
