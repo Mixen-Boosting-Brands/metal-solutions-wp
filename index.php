@@ -127,7 +127,76 @@
     </div>
 </section>
 
+<section id="servicios" class="py-30">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col text-center">
+                <p
+                    class="mb-0"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="0"
+                >
+                    Conoce todos nuestros
+                </p>
+                <h1
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                >
+                    Servicios
+                </h1>
+            </div>
+        </div>
+        <div
+            class="row"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+        >
+            <?php
+            // 1. Argumentos para la consulta de WordPress
+            $args = [
+                "post_type" => "servicio", // Tu Custom Post Type
+                "posts_per_page" => -1, // -1 para traer todos los servicios
+                "orderby" => "menu_order title", // Ordenar por orden de menú o título
+                "order" => "ASC", // Orden ascendente
+            ];
 
+            // 2. Creamos la nueva consulta
+            $servicios_query = new WP_Query($args);
+
+            // 3. El Bucle (The Loop)
+            if ($servicios_query->have_posts()):
+                while ($servicios_query->have_posts()):
+                    $servicios_query->the_post(); ?>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <a
+                        href="<?php the_permalink(); ?>"
+                        id="btn-s-<?php the_ID(); ?>"
+                        class="elemento"
+                        data-bs-img="<?php echo get_the_post_thumbnail_url(
+                            get_the_ID(),
+                            "large",
+                        ); ?>"
+                    >
+                        <div class="overlay"></div>
+                        <p class="fw-bold"><?php the_title(); ?></p>
+                        <p class="mb-0"></p>
+                    </a>
+                </div>
+            <?php
+                endwhile;
+                // 4. Restauramos los datos del post original
+                wp_reset_postdata();
+                // Opcional: Mensaje si no se encuentran servicios
+            else:
+                echo '<p class="text-center">No hay servicios disponibles en este momento.</p>';
+            endif;
+            ?>
+        </div>
+    </div>
+</section>
 
 <section id="productos" class="py-30">
     <div class="container">
