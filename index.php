@@ -225,289 +225,48 @@
             data-aos-duration="1000"
             data-aos-delay="200"
         >
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-1"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-1.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Poste línea de vida universal</p>
-                    <ul class="mb-0">
-                        <li>
-                            Poste para anclaje de líneas de vida con
-                            sujeción a crestas de sistemas de charolas.
-                        </li>
-                        <li>
-                            Tubo 3” ced. 40, Asa “U” de ½”, altura total
-                            de 22”. Placa de ½” A36.
-                        </li>
-                        <li>
-                            Acabado zinc electrólitico o pintura
-                            electrostática amarillo seguridad.
-                        </li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-2"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-2.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Kit coping</p>
-                    <ul class="mb-0">
-                        <li>
-                            Coping de 3 mts de largo. Se fabrica al
-                            ancho del muro.
-                        </li>
-                        <li>
-                            Incluye splice plate o Cap para unión entre
-                            copings. Clip A y B para fácil instalación.
-                        </li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-3"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-3.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Accesorios para techos</p>
-                    <ul class="mb-0">
-                        <li>
-                            Cajillo. Para conexión de canalón con la
-                            bajante pluvial. Lamina pintro C24
-                        </li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-4"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-4.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Placas de apoyo</p>
-                    <ul class="mb-0">
-                        <li>
-                            Para usarse en los traslapes transversales
-                            para mejor sujeción.
-                        </li>
-                        <li>Lamina galvanizada C16</li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-5"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-5.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Solera de traslape</p>
-                    <ul class="mb-0">
-                        <li>
-                            Para usarse en los traslapes transversales
-                            para mejor sujeción.
-                        </li>
-                        <li>Acero inoxidable C16</li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-6"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-6.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Accesorios para techos</p>
-                    <ul class="mb-0">
-                        <li>
-                            Cumbreras. Lamina galvanizada C22, longitud
-                            10ft, desarrollo según plano.
-                        </li>
-                        <li>
-                            Kit flashing, counterflashing y moldura
-                            rigidizante. Lamina C22, longitud 10 ft.
-                            Desarrollo según plano.
-                        </li>
-                        <li>
-                            Bajantes pluviales. Lamina pintro C22,
-                            longitud 10 ft.
-                        </li>
-                        <li>
-                            Cajillo. Para conexión de canalón con la
-                            bajante pluvial. Lámina pintro C24.
-                        </li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-7"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-7.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Roof Curb</p>
-                    <ul class="mb-0">
-                        <li>
-                            Lámina galvanizada según calibre requerido
-                            (C22, C20, C18).
-                        </li>
-                        <li>
-                            Fácil armado con pestañas para unión de
-                            lados.
-                        </li>
-                        <li>
-                            Acabado electrostático blanco std. al
-                            interior.
-                        </li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-8"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-8.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Cajones guarda herramientas</p>
-                    <ul class="mb-0">
-                        <li>Ligeros con asas y porta candado.</li>
-                        <li>
-                            1.50 m de largo, 30 cm alto y 60cm
-                            profundidad.
-                        </li>
-                        <li>
-                            Lámina galvanizada C18 acabado
-                            electrostático color negro.
-                        </li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-9"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-9.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Engargoladoras 180°</p>
-                    <ul class="mb-0">
-                        <li>
-                            Como su nombre lo indica, son ideales para
-                            unir dos charolas según al giro deseado.
-                        </li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-10"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-10.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Engargoladoras 90°</p>
-                    <ul class="mb-0">
-                        <li>
-                            Como su nombre lo indica, son ideales para
-                            unir dos charolas según al giro deseado.
-                        </li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-11"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-11.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">Roof clamp</p>
-                    <ul class="mb-0">
-                        <li>Giro 360° para líneas de vida.</li>
-                        <li>Sujeción a crestas.</li>
-                        <li>
-                            Se puede sujetar a 1 o 2 charolas según tipo
-                            de sistema.
-                        </li>
-                        <li>
-                            Tubo 3”, canal C 3” A36, placa de acero,
-                            tornillería galvanizada.
-                        </li>
-                        <li>
-                            Acabado amarillo seguridad en pintura
-                            electrostática.
-                        </li>
-                        <li>Soporta una carga de 3600 lbs.</li>
-                    </ul>
-                </a>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-                <a
-                    href="#"
-                    id="btn-p-12"
-                    class="elemento"
-                    data-bs-img="<?php echo esc_url(
-                        get_template_directory_uri(),
-                    ); ?>/assets/images/servicios-y-productos/bg-p-12.png"
-                >
-                    <div class="overlay"></div>
-                    <p class="fw-bold">
-                        Dispositivo personal de argolla
-                    </p>
-                    <ul class="mb-0">
-                        <li>
-                            Punto fijo de seguridad para anclaje en
-                            cresta.
-                        </li>
-                        <li>Tornillería galvanizada para sujeción.</li>
-                        <li>Acero 1018 acabado zinc electrolítico.</li>
-                    </ul>
-                </a>
-            </div>
+            <?php
+            // Argumentos para la consulta
+            $args = [
+                "post_type" => "producto",
+                "posts_per_page" => -1,
+                "orderby" => "menu_order title",
+                "order" => "ASC",
+            ];
+
+            // Creamos la nueva consulta
+            $productos_query = new WP_Query($args);
+
+            // El Bucle (The Loop)
+            if ($productos_query->have_posts()):
+                while ($productos_query->have_posts()):
+                    $productos_query->the_post(); ?>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <a
+                        href="<?php the_permalink(); ?>"
+                        id="btn-p-<?php the_ID(); ?>"
+                        class="elemento"
+                        data-bs-img="<?php echo get_the_post_thumbnail_url(
+                            get_the_ID(),
+                            "large",
+                        ); ?>"
+                    >
+                        <div class="overlay"></div>
+                        <p class="fw-bold"><?php the_title(); ?></p>
+
+                        <?php the_content(); ?>
+
+                    </a>
+                </div>
+            <?php
+                endwhile;
+                // Restauramos los datos del post original
+                wp_reset_postdata();
+                // Opcional: Mensaje si no se encuentran productos
+            else:
+                echo '<p class="text-center">No hay productos disponibles en este momento.</p>';
+            endif;
+            ?>
         </div>
     </div>
 </section>
