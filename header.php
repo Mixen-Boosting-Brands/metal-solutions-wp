@@ -114,22 +114,72 @@
                 </nav>
                 <div id="contacto-menu">
                     <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <a
-                                class="btn btn-primary rounded-pill"
-                                href="tel:+526141735378"
-                                ><i class="fa-solid fa-phone"></i> Karla Solís
-                                614 173 5378</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="btn btn-primary rounded-pill"
-                                href="tel:+526141776547"
-                                ><i class="fa-solid fa-phone"></i> Marco Beltrán
-                                614 177 6547</a
-                            >
-                        </li>
+
+                        <?php
+                        // Obtenemos los datos del primer teléfono
+                        $tel_1 = get_field("telefono_1");
+
+                        // Verificamos que el grupo y el subcampo 'telefono' no estén vacíos
+                        if ($tel_1 && !empty($tel_1["telefono"])):
+                            // Formateamos el número para mostrarlo con espacios (e.g., 614 173 5378)
+                            $telefono_formateado_1 =
+                                substr($tel_1["telefono"], 0, 3) .
+                                " " .
+                                substr($tel_1["telefono"], 3, 3) .
+                                " " .
+                                substr($tel_1["telefono"], 6, 4); ?>
+                            <li class="mb-3">
+                                <a
+                                    class="btn btn-primary rounded-pill"
+                                    href="tel:+52<?php echo esc_attr(
+                                        $tel_1["telefono"],
+                                    ); ?>"
+                                >
+                                    <i class="fa-solid fa-phone"></i> <?php echo esc_html(
+                                        $tel_1["nombre"],
+                                    ); ?>
+                                    <?php echo esc_html(
+                                        $telefono_formateado_1,
+                                    ); ?>
+                                </a>
+                            </li>
+                        <?php
+                        endif;
+                        ?>
+
+
+                        <?php
+                        // Obtenemos los datos del segundo teléfono
+                        $tel_2 = get_field("telefono_2");
+
+                        // Verificamos que el grupo y el subcampo 'telefono' no estén vacíos
+                        if ($tel_2 && !empty($tel_2["telefono"])):
+                            // Formateamos el número para mostrarlo con espacios
+                            $telefono_formateado_2 =
+                                substr($tel_2["telefono"], 0, 3) .
+                                " " .
+                                substr($tel_2["telefono"], 3, 3) .
+                                " " .
+                                substr($tel_2["telefono"], 6, 4); ?>
+                            <li>
+                                <a
+                                    class="btn btn-primary rounded-pill"
+                                    href="tel:+52<?php echo esc_attr(
+                                        $tel_2["telefono"],
+                                    ); ?>"
+                                >
+                                    <i class="fa-solid fa-phone"></i> <?php echo esc_html(
+                                        $tel_2["nombre"],
+                                    ); ?>
+                                    <?php echo esc_html(
+                                        $telefono_formateado_2,
+                                    ); ?>
+                                </a>
+                            </li>
+                        <?php
+                        endif;
+                        ?>
+
                     </ul>
                 </div>
             </div>
