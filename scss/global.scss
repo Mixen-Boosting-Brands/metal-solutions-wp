@@ -306,15 +306,15 @@ header {
     }
 
     .elemento {
+        display: block;
         text-decoration: none;
         color: $white;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        // justify-content: space-between;
         min-height: 200px;
         overflow: hidden;
         padding: 20px;
-        background-size: 150%;
         transition: background-size 2s ease;
         position: relative;
         font-size: 0.9rem;
