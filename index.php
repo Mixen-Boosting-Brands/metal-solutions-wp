@@ -255,7 +255,7 @@
                     >
                         <div class="overlay"></div>
                         <p class="fw-bold"><?php the_title(); ?></p>
-                        <p class="mb-0"></p>
+                        <?php the_content(); ?>
                     </a>
                 </div>
             <?php
@@ -330,9 +330,7 @@
                     >
                         <div class="overlay"></div>
                         <p class="fw-bold"><?php the_title(); ?></p>
-
                         <?php the_content(); ?>
-
                     </a>
                 </div>
             <?php
@@ -381,6 +379,8 @@
                             <?php // Recorremos cada imagen dentro del grupo 'galeria'
             // Recorremos cada imagen dentro del grupo 'galeria'
             // Recorremos cada imagen dentro del grupo 'galeria'
+                            // Recorremos cada imagen dentro del grupo 'galeria'
+                            // Recorremos cada imagen dentro del grupo 'galeria'
                             // Recorremos cada imagen dentro del grupo 'galeria'
                             // Recorremos cada imagen dentro del grupo 'galeria'
                             foreach ($galeria as $nombre_campo => $imagen_url):

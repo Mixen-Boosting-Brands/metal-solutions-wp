@@ -53,6 +53,15 @@
                                         >Certificaciones</a
                                     >
                                 </li>
+                                <li>
+                                    <a href="<?php echo esc_url(
+                                        get_permalink(3),
+                                    ); ?>"
+                                        ><?php echo esc_html(
+                                            get_the_title(3),
+                                        ); ?>
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
