@@ -46,7 +46,7 @@
                                         home_url(),
                                     ); ?>#galeria-de-fotos">Conócenos</a>
                                 </li>
-                                <li>
+                                <li class="mb-2">
                                     <a href="<?php echo esc_url(
                                         home_url(),
                                     ); ?>#certificaciones"
